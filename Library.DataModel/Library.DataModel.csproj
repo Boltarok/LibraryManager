@@ -60,6 +60,7 @@
     <Compile Include="Entities\DataModelContext.cs" />
     <Compile Include="Entities\LoanEntity.cs" />
     <Compile Include="Entities\MemberEntity.cs" />
+    <Compile Include="Enums\BookStatus.cs" />
     <Compile Include="Mappings\BookMappingModule.cs" />
     <Compile Include="Mappings\IMappingModule.cs" />
     <Compile Include="Mappings\LoanMappingModule.cs" />

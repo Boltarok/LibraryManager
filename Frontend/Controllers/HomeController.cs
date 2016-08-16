@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Library.Database.Managers;
+using Library.DataModel.Business;
+using Library.DataModel.Entities;
+using Library.DataModel.Enums;
 
 namespace Frontend.Controllers
 {
@@ -10,6 +14,12 @@ namespace Frontend.Controllers
     {
         public ActionResult Index()
         {
+            using(var manager = new BookManager(new DataModelContext()))
+            {
+                var book = manager.SetBook(new Book() { Title = "Señor de los Anillos", AmmountAvailable = 20, Status = BookStatus.Available.ToString() });
+                var books = manager.GetBooks();
+            }
+
             return View();
         }
 
