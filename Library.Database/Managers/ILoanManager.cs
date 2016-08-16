@@ -11,7 +11,7 @@ namespace Library.Database.Managers
     {
         Loan GetLoan(int loanNumber);
         IEnumerable<Loan> GetLoans();
-        Book SetLoan(Loan loan);
+        Loan SetLoan(Loan loan);
         void DeleteLoan(int loanNumber);
     }
 }
